@@ -1,0 +1,33 @@
+// Send GET to /
+GET http://localhost:3000/
+
+###
+
+// GET home (authenticated)
+GET http://localhost:3000/api
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzQ4ZTYzNGQzY2NlZjk0ZDBhNGI2NyIsImlhdCI6MTY0NzY4Njk0MCwiZXhwIjoxNjQ3NjkwNTQwfQ.KgXalYLhUIIQyYe1G661N08mYpMizub9BtftcVTfQ0M
+
+### 
+
+// GET users 
+GET http://localhost:3000/api/users
+#auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzQ4ZTYzNGQzY2NlZjk0ZDBhNGI2NyIsImlhdCI6MTY0NzY4Njk0MCwiZXhwIjoxNjQ3NjkwNTQwfQ.KgXalYLhUIIQyYe1G661N08mYpMizub9BtftcVTfQ0M
+### 
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email" : "alice@alice.com",
+    "password" : "12345"
+}
+
+### 
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+   "name" : "eric",
+    "email" : "eric@alice.com",
+    "password" : "12345678"
+}
