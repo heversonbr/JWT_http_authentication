@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
+// This example shows how to use JWT TOKEN to authorize registered users to access the resources.
+// We use mongodb to store registered users. 
+
 // Import routes
 const authRoutes = require('./api/routes/auth');
 const publicRoutes = require('./api/routes/public')
